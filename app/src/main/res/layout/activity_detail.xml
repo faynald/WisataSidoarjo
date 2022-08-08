@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_back_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#CEFFFFFF"
+        android:layout_margin="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.farhanrv.wisatasidoarjo.ui.component.CustomImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image4"
+        android:scaleType="centerCrop"
+        android:fitsSystemWindows="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root_card_view_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blur_view"
+            app:blurOverlayColor="#65000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_blur_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_margin="24dp">
+
+                <TextView
+                    android:id="@+id/tv_item_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_bookmark"
+                    tools:text="Trio Gili" />
+
+                <ImageView
+                    android:id="@+id/img_location"
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintTop_toBottomOf="@id/rating_bar"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="?attr/ratingBarStyleSmall"
+                    android:theme="@style/RatingBar"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_item_title"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_lokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@id/img_location"
+                    app:layout_constraintStart_toEndOf="@id/img_location"
+                    tools:text="Buduran" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/white"
+                    android:maxLines="6"
+                    android:ellipsize="end"
+                    tools:text="The 3 Gili Lombok tours are Gili Trawangan, Gili Air and Gili Meno. These three Gilis seem to be able to represent the beauty of the beaches in Lombok. Almost all tourists visiting Lombok take the time to visit the Three Gilis. Below is a review of the Three Gilis, which are the 3 most exotic Gili Lombok
+. . .The 3 Gili Lombok tours are Gili Trawangan, Gili Air and Gili Meno. These three Gilis seem to be able to represent the beauty of the beaches in Lombok. Almost all tourists visiting Lombok take the time to visit the Three Gilis. Below is a review of the Three Gilis, which are the 3 most exotic Gili Lombok
+. . ."
+                    app:layout_constraintTop_toBottomOf="@id/img_location"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:text="Explore Now"
+                    android:textAllCaps="false"
+                    app:cornerRadius="32dp"
+                    android:backgroundTint="#F11919"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btn_bookmark"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_bookmark_border"
+                    app:layout_constraintTop_toTopOf="@id/tv_item_title"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_item_title"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </eightbitlab.com.blurview.BlurView>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/loading_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/layout_error"
+        layout="@layout/layout_error"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
