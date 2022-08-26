@@ -14,7 +14,7 @@ interface WisataDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertWisata(list: List<WisataListEntity>)
 
-    @Query("SELECT * FROM wisata_detail_entity WHERE kode_wisata = :kode")
+    @Query("SELECT * FROM wisata_detail_entity WHERE wisata_id = :kode")
     fun getDetail(kode: String): Flow<List<WisataDetailEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -6,8 +6,8 @@ data class WisataListResponse(
     @field:SerializedName("nama")
     val nama: String,
 
-    @field:SerializedName("kode_wisata")
-    val kodeWisata: String,
+    @field:SerializedName("id")
+    val id: String,
 
     @field:SerializedName("thumbnail")
     val thumbnail: String

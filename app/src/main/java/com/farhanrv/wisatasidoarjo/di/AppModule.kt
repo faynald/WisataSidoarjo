@@ -41,7 +41,7 @@ val apiModule = module {
     }
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://wisata-sidoarjo-api.herokuapp.com/")
+            .baseUrl("http://192.168.56.1/my/api/wisatasidoarjo/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(get())
             .build()

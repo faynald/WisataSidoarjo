@@ -9,10 +9,8 @@ object DataDetailMapper {
         input.map {
             val detail = WisataDetailEntity(
                 nama = it.nama,
-                kodeWisata = it.kodeWisata,
+                wisataId = it.wisataId,
                 lokasi = it.lokasi,
-                jamOperasional = it.jamOperasional,
-                biaya = it.biaya,
                 gambar = it.gambar,
                 googleMap = it.googleMap,
                 deskripsi = it.deskripsi,

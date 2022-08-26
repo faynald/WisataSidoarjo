@@ -11,15 +11,10 @@ data class WisataDetailEntity(
 
     val nama: String,
 
-    @ColumnInfo(name = "kode_wisata")
-    val kodeWisata: String,
+    @ColumnInfo(name = "wisata_id")
+    val wisataId: String,
 
     val lokasi: String,
-
-    @ColumnInfo(name = "jam_operasional")
-    val jamOperasional: String,
-
-    val biaya: String,
 
     val gambar: List<String>,
 

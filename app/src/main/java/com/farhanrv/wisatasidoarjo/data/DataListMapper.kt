@@ -9,7 +9,7 @@ object DataListMapper {
         input.map {
             val wisata = WisataListEntity(
                 nama = it.nama,
-                kodeWisata = it.kodeWisata,
+                kodeWisata = it.id,
                 thumbnail = it.thumbnail,
                 isFavorite = false
             )

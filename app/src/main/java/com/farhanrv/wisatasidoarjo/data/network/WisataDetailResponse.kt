@@ -6,17 +6,11 @@ data class WisataDetailResponse(
     @field:SerializedName("nama")
     val nama: String,
 
-    @field:SerializedName("kode_wisata")
-    val kodeWisata: String,
+    @field:SerializedName("wisata_id")
+    val wisataId: String,
 
     @field:SerializedName("lokasi")
     val lokasi: String,
-
-    @field:SerializedName("jam_operasional")
-    val jamOperasional: String,
-
-    @field:SerializedName("biaya_masuk")
-    val biaya: String,
 
     @field:SerializedName("images")
     val gambar: List<String>,

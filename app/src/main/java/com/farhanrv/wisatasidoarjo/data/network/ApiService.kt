@@ -4,9 +4,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface ApiService {
-    @GET("list")
+    @GET(".")
     suspend fun getWisata(): List<WisataListResponse>
 
-    @GET("detail/{kode_wisata}")
+    @GET("{kode_wisata}")
     suspend fun getDetail(@Path("kode_wisata") kodeWisata: String): List<WisataDetailResponse>
 }
