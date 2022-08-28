@@ -6,50 +6,45 @@
     android:layout_height="match_parent" >
 
     <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.WisataSidoarjo.AppBarOverlay">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            app:contentInsetStart="0dp"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:backgroundTint="@color/white"
-            android:background="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/Theme.WisataSidoarjo.PopupOverlay" >
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <TextView
-                    android:id="@+id/tv_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    style="@style/HomeTextAppearance"
-                    android:fontFamily="@font/helvetica_neue_medium_extended"
-                    android:text="Cari Wisata : " />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_search"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tv_search"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/black"
-                    android:drawableEnd="@drawable/ic_search"
-                    android:drawableTint="@color/black"
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" >
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <androidx.appcompat.widget.SearchView
+                            app:queryHint="Search"
+                            app:iconifiedByDefault="false"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="8dp"
+                            android:background="@drawable/searchview_background"
+                            app:queryBackground="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
