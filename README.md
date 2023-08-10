@@ -5,6 +5,8 @@
 ## About
 This is a project that I made for personal and learning purposes. The theme of the application is tourism. The application can help users to find tours located in Sidoarjo.
 
+<img src="https://github.com/faynald/WisataSidoarjo/blob/master/preview.jpg" style="max-width:100%">
+
 ## Features
 <ul>
   <li>Display list of tours</li>
@@ -15,7 +17,7 @@ This is a project that I made for personal and learning purposes. The theme of t
   <li>Offline Caching</li>
 </ul>
 
-## Tech Stack
+## Build With
 <ul>
   <li>MVVM Architecture Pattern</li>
   <li>Coroutines</li>
@@ -52,6 +54,3 @@ This is a project that I made for personal and learning purposes. The theme of t
 [10]: https://github.com/androidbroadcast/ViewBindingPropertyDelegate
 [11]: https://github.com/Dimezis/BlurView
 [12]: https://github.com/airbnb/lottie-android
-
-# Preview
-Coming soon.
